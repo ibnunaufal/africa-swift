@@ -9,7 +9,18 @@ import SwiftUI
 
 struct VideoListView: View {
     var body: some View {
-        Text("Video")
+        let videos: [Video] = Bundle.main.decode("videos.json")
+        
+        NavigationView(){
+            List {
+                ForEach(videos) { item in
+                    NavigationLink(destination: VideoPlayerView(video: item)){
+                        VideoListItemView(video: item)
+                    }
+                }
+            }.navigationBarTitle("Africa", displayMode: .large)
+        }
+        
     }
 }
 

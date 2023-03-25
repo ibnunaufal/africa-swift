@@ -18,7 +18,7 @@ struct MainView: View {
             VideoListView()
                 .tabItem {
                     Image(systemName: "play.rectangle")
-                    Text("Browse")
+                    Text("Video")
                 }
             MapView()
                 .tabItem {
